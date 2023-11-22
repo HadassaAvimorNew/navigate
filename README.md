@@ -21,7 +21,7 @@
     </div>
     <div class="instructions">
       <h2>היכן למצוא עזרה</h2>
-      <p>אם יש לך שאלות או בעיה, אני זמינה במייל <a href="mailto:chavischatz@gmail.com">chavischatz@gmail.com</a>.</p>
+      <p>אם יש לך שאלות או בעיה, אני זמינה במייל <a href="mailto:h0533185978@gmail.com">chavischatz@gmail.com</a>.</p>
     </div>
     <p>בהצלחה והנאה מהתרגול! 😊</p>
   </main>
