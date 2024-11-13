@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        התכנות בימינו הוא מרוץ בין מהנדסי תוכנה ששואפים לבנות תוכניות שחסינות בפני אידיוטים גדולים יותר ויותר, לבין היקום שמנסה לייצר אידיוטים גדולים יותר ויותר. עד עכשיו היקום מנצח.
+
+“Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.”
+
+Rick Cook, The Wizardry Compiled
+
+כל שוטה יכול לכתוב תוכנה שמחשב יהיה מסוגל לקרוא. מתכנתים טובים כותבים קוד שבני אדם מסוגלים לקרוא.
+
+“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
+
+Martin Fowler
+
+אני לא מתכנת מעולה, אני בסך הכל מתכנת טוב עם הרגלים מעולים.
+
+“I'm not a great programmer; I'm just a good programmer with great habits.”
+
+Kent Beck
+
+האמת נמצאת במקום אחד, בקוד.
+
+“T\ruth can only be found in one place: the code.”
+
+Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship
+
+כולם יודעים שלדבג קוד זו משימה קשה פי שניים מלכתוב את התוכנה מלכתחילה. כך שאם תישאר חכם כמו שהיית בזמן בו כתבת את התוכנה, איך תוכל לדבג אותה אי פעם?
+
+“Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?”
+
+Brian Kernighan
+
+שפת תכנות שאינה משנה את הדרך שבה אתם חושבים על תכנות לא שווה שתלמדו אותה.
+
+“A language that doesn't affect the way you think about programming is not worth knowing.”
+
+Alan J. Perlis
+
+פרל, שפת התכנות היחידה שנראית אותו הדבר לפני הצפנת rsa ואחרי.
+
+“Perl – The only language that looks the same before and after RSA encryption.”
+
+Keith Bostic
+
+מתכנתים לא אמורים להימדד על ידי היצירתיות או הלוגיקה שלהם אלא רק על ידי השלמות של ניתוח המצבים שלהם.
+
+“Programmers are not to be measured by their ingenuity and their logic but by the completeness of their case analysis.”
+
+Alan J. Perlis
+
+האם ייתכן שתוכנה לא אמורה להיות כמו שאר הדברים? שהיא אמורה להיזרק? שחייבים תמיד להתייחס אליה כמו אל בועת סבון חולפת?
+
+“Is it possible that software is not like anything else, that it is meant to be discarded: that the whole point is to always see it as a soap bubble?”
+
+Alan J Perlis
+
+כמה מנותקת מהמציאות צריכה להיות מתכנתת בשביל לחשוב שהיא תצליח לבנות תוכנה מורכבת מיד בפעם הראשונה?
+
+“What kind of programmer is so divorced from reality that she thinks she'll get complex software right the first time?”
+
+James Alan Gardner, Ascending
+
+הדרך היחידה להיות מהיר זה להיות טוב.
+
+“The only way to go fast, is to go well.”
+
+Robert C. Martin, Clean Architecture
+
+נראה לי שחיי היום-יום הם כמו תכנות. אם אתה אוהב משהו אתה יכול להוסיף לו יופי.
+
+“Everyday life is like programming, I guess. If you love something you can put beauty into it.”
+
+Donald Knuth
+
+לתהות על החלטה שנעשתה על ידי יוצרי שפת תכנות זה הצעד הראשון בדרך להיות אחד מהם.
+
+“Second-guessing a decision made by a programming-language designer is the first step on the road to becoming one.”
+
+Robert Sedgewick, Kevin Wayne
+
+אופטימיזציות משמעותיות מגיעות משיפורים בתכנון, לא משיפורים בפונקציות מסוימות.
+
+“The big optimizations come from refining the high-level design, not the individual routines.”
+
+Steve McConnell, Code Complete
+
+אם אלגוריתם הוא מתכון, אז תוכנה היא הוראות מפורטות לרובוט איך להכין אוכל לחודש עבור צבא כאשר הוא נמצא תחת מתקפת אויב.
+
+“So if an algorithm is an idealized recipe, a program is the detailed set of instructions for a cooking robot preparing a month of meals for an army while under enemy attack,”
+
+Kernighan Brian W.
+
+הפשטה זה הסרה של הלא רלוונטי והגברה של החיוני.
+
+“Abstraction is the elimination of the irrelevant and the amplification of the essential.”
+
+Robert C. Martin, Agile Principles, Patterns, and Practices in C#
+
+המטרה שלי בפרק הזה היא להראות שאין שום קסם בכתיבת שפת תכנות משלכם. לעתים אני חש שיש המצאות שהן כל כך חכמות ומורכבות עד כדי כך שאין שום סיכוי שאצליח להבין אותן. אבל בעזרת קצת קריאה והתנסות הרבה מהן הופכות להיות די בנאליות.
+
+“The main thing I want to show in this chapter is that there is no magic involved in building your own language. I’ve often felt that some human inventions were so immensely clever and complicated that I’d never be able to understand them. But with a little reading and tinkering, such things often turn out to be quite mundane.”
+
+Marijn Haverbeke, Eloquent JavaScript: A Modern Introduction
+
+האתגר בלימוד פרדיגמה של שפת תכנות חדשה אינו בעצם הלימוד של שפה חדשה. אחרי הכל, כל מי שקורא את הטקסט הזה למד מספר שפות תכנות – תחביר של שפה זה בסך הכל פרטים טכניים. החלק המאתגר הוא ללמוד לחשוב בצורה חדשה.
+
+“The problem with a completely new programming paradigm isn’t learning a new language. After all, everyone reading this has learned numerous computer languages— language syntax is merely details. The tricky part is learning to think in a different way.”
+
+Neal Ford, Functional Thinking
+
+בתוכנה יש שתי אפשרויות: או שהמשתמש שולט בתוכנה או שהתוכנה שולטת במשתמש. אם התוכנה שולטת במשתמש והמתכנת שולט בתוכנה, אז התוכנה היא כלי עם כוח לא מוצדק.
+
+“With software there are only two possibilities: either the users control the program or the program controls the users. If the program controls the users, and the developer controls the program, then the program is an instrument of unjust power.”
+
+Richard Stallman
+
+החלטת הארכיטקטורה המושלמת היא זו שמעולם לא הייתה צריכה להיעשות.
+
+“The perfect kind of architecture decision is the one which never has to be made”
+
+Robert C. Martin
+
+שלמות מושגת לא כאשר אי אפשר להוסיף שום דבר, אלא כאשר אי אפשר לוותר על שום דבר.
+
+“Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.”
+
+Antoine de Saint-Exupery
+
+תתקן את הבעיה, לא את הסימפטומים.
+
+“Fix the cause, not the symptom.”
+
+Steve Maguire
+
+אופטימיות היא מפגע תעסוקתי עבור המתכנת. פידבק הוא הטיפול.
+
+“Optimism is an occupational hazard of programming: feedback is the treatment. “
+
+Kent Beck
+
+מתי להשתמש בתכנות איטרטיבי? צריך להשתמש בתכנות איטרטיבי רק בפרויקטים שאנחנו רוצים שיצליחו.
+
+“When to use iterative development? You should use iterative development only on projects that you want to succeed.”
+
+Martin Fowler
+
+הפשטות היא מהותה של היעילות.
+
+“Simplicity is the soul of efficiency.”
+
+Austin Freeman
+
+לפני שתוכנה צריכה להיות ראויה לשימוש חוזר, היא צריכה להיות ראויה לשימוש בכלל.
+
+“Before software can be reusable it first has to be usable.”
+
+Ralph Johnson
+
+מה שמתכנת אחד יכול להספיק בחודש, שני מתכנתים יכולים להספיק בחודשיים.
+
+What one programmer can do in one month, two programmers can do in two months.
+
+Fred Brooks
+
+כל מתכנת מעולה שאתם מכירים הגיע לרמה שלו על ידי פתירת בעיות שהיו מעבר ליכולת שלו, עד שהוא פתר אותן.
+
+Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.
+
+Patrick McKenzie
+
+בהיסטוריה של עולם המחשוב, מעולם לא היה מישהו שכתב תוכנה מושלמת. לא סביר שאתה תהיה הראשון.
+
+No one in the brief history of computing has ever written a piece of perfect software. It's unlikely that you'll be the first.
+
+Andy Hunt
+
+אחד מהכישורים הכי חשובים בתכנות זה לדעת להתנתק לזמן מה.
+
+One of the best programming skills you can have is knowing when to walk away for awhile.
+
+Oscar Godson
+
+בלי דרישות או תכנון, תכנות זה אומנות של הוספת באגים לקובץ טקסט ריק.
+
+“Without requirements or design, programming is the art of adding bugs to an empty text file.”
+
+Louis Srygley
+
+אולי קשה לחשוב שמתכנתים הם אמנים, אבל תכנות הוא מקצוע יצירתי מאוד. זו יצירתיות מבוססת לוגיקה.
+
+“You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.”
+
+John Romero
+
+חוק ה-50-50-90: בכל פעם שיש סיכוי של 50-50 שמשהו יעבוד, יש סיכוי של 90 אחוז שהוא לא.
+
+“The 50-50-90 rule: Anytime you have a 50-50 chance of getting something right, there's a 90% probability you'll get it wrong.”
+
+Anonymous
+
+אחד הימים הכי פרודוקטיביים שלי היה היום בו זרקתי 1000 שורות קוד.
+
+“One of my most productive days was throwing away 1000 lines of code.”
+
+Ken Thompson
+
+לא צריך לדאוג אם משהו לא עובד. אם הכל היה עובד לא הייתה לך עבודה.
+
+“Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.”
+
+(Mosher’s Law of Software Engineering)
+
+יש רק שני סוגים של שפות. אלו שאנשים מתלוננים עליהן ואלה שאף אחד לא משתמש בהן.
+
+“There are only two kinds of languages: the ones people complain about and the ones nobody uses.”
+
+Bjarne Stroustrup
+
+לינוקס הוא חינמי רק אם לזמן שלך אין ערך.
+
+“Linux is only free if your time has no value. ”
+
+Jamie Zawinski
+
+אופטימיזציה בוסרית היא שורש כל הרע.
+
+“Premature optimization is the root of all evil.”
+
+Donald Knuth
+
+לומר שתוכנה מוכנה זה כמו לומר שהדשא מכוסח.
+
+“Software being 'Done' is like lawn being 'Mowed'.”
+
+Jim Benson
+
+תוכנות מעצבנות כי המשתמשים רוצים אותן כך.
+
+“Software sucks because users demand it to.”
+
+Nathan Myhrvold
+
+אין טסט כמו פרודקשן.
+
+“There’s no test like production.”
+
+Anonymous
+
+ממשק משתמש צריך להיות פשוט עד כדי שבזמן חירום משתמש מתחיל יוכל להבין אותו תוך עשר שניות.
+
+“A user interface should be so simple that a beginner in an emergency can understand it within ten seconds.”
+
+Ted Nelson
+
+הקבוע של האחד הוא משתנה של השני.
+
+“One man’s constant is another man’s variable.”
+
+Alan J. Perlis
+
+יש אנשים שחושבים שהם שונאים מחשבים. מה שהם באמת שונאים זה מתכנתים גרועים.
+
+“That's the thing about people who think they hate computers. What they really hate is lousy programmers.”
+
+Larry Niven
+
+הליכה על מים ופיתוח לפי מסמך דרישות זה קל רק אם שניהם קפואים.
+
+“Walking on water and developing software from a specification are easy if both are frozen.”
+
+Edward V. Berard
+
+חלק מהתכנות הטוב ביותר נעשה על גבי נייר. להכניס את זה לתוך מחשב זה רק פרט קטן.
+
+“Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.”
+
+Max Kanat-Alexander, Code Simplicity: The Fundamentals of Software
+
+אנחנו יכולים להתקדם רק אם אנחנו מלמדים את עצמנו לחשוב על תוכניות בלי לחשוב עליהם בתור פיסות קוד להרצה.
+
+“Progress is possible only if we train ourselves to think about programs without thinking of them as pieces of executable code. ”
+
+Edsger W. Dijkstra
+
+לשחק עם פוינטרים זה כמו לשחק באש. אש היא כנראה הכלי החשוב ביותר של האדם. כאשר משתמשים בה בזהירות היא מביאה תועלת שאין כמותה. כאשר היא יוצאת משליטה, קורים אסונות.
+
+Playing with pointers is like playing with fire. Fire is perhaps the most important tool known to man. Carefully used, fire brings enormous benefits; but when fire gets out of control, disaster strikes.
+
+John Barnes, Programming in Ada 2012, Cambridge University Press, 2014, p. 189
+
+אם תשקר על המחשב הוא יעלה עליך.
+
+If you lie to the computer, it will get you.
+
+Perry Farrar (1985) attributed to Farrar in John Bentley (1985) "Bumper-Sticker Computer Science". In: Communications of the ACM, Vol 28. Nr.9, p. 899
+
+אין שום שפת מחשב, ולא משנה כמה מובנית היא תהיה, שתמנע ממתכנתים לכתוב תוכניות גרועות.
+
+There is no programming language, no matter how structured, that will prevent programmers from making bad programs.
+
+Larry Flon (1975) "On research in structured programming". SIGPLAN Not., 10(10), pp.16–17
+
+אם אני שואל מרצה מה הוא מלמד בקורס המבוא לתכנות והוא עונה לי משהו כמו ״פסקל״ או ״פורטרן״, אני יודע שהוא מלמד דקדוק, כמה כללים סמנטיים וקצת אלגוריתמים מוכנים מראש. ומשאיר לסטודנטים לגלות בעצמם את תהליך התכנון.
+
+If I ask another professor what he teaches in the introductory programming course, whether he answers proudly "Pascal" or diffidently "FORTRAN," I know that he is teaching a grammar, a set of semantic rules, and some finished algorithms, leaving the students to discover, on their own, some process of design.
+
+Robert Floyd (1979) "The Paradigms of Programming" 1978 Turing Award Lecture. Communications of the ACM Vol 22 (8) p. 455–460
+
+הדבר הכי חשוב בשפת תכנות זה השם שלה. היא לא תצליח בלי שם טוב. לא מזמן עליתי על שם מעולה ועכשיו נשאר לי רק למצוא שפה מתאימה.
+
+The most important thing in a programming language is the name. A language will not succeed without a good name. I have recently invented a very good name, and now I am looking for a suitable language.
+
+Donald Knuth (1938–)
+
+אחד למיליון פירושו ביום שלישי הבא.
+
+One in a million is next Tuesday.
+
+Gordon Letwin (architect for DOS 4)
+
+מי שלא כתב באסמבלי כשהיה צעיר אין לו לב. מי שעושה את זה בתור בוגר אין לו שכל.
+
+He who hasn't hacked assembly language as a youth has no heart. He who does as an adult has no brain.
+
+John Moore
+
+קשר מתמשך עם מחשב הופך מתמטיקאים לפקידים ולהיפך.
+
+Prolonged contact with the computer turns mathematicians into clerks and vice versa.
+
+Alan Perlis, "Epigrams on Programming"
+
+יש שתי דרכים לכתוב קוד ללא שגיאות. רק הדרך השלישית עובדת.
+
+There are two ways to write error-free programs; only the third one works.
+
+Alan Perlis, "Epigrams on Programming"
+
+כשמישהו אומר: ״אני רוצה שפת תכנות בה אני אצטרך לומר רק מה אני רוצה לעשות״, תנו לו סוכריה על מקל.
+
+When someone says: "I want a programming language in which I need only say what I wish done", give him a lollipop.
+
+Alan J. Perlis
+
+תוכנות ובתי כנסת דומים למדי. קודם כל בונים אותם, ואז מתפללים.
+
+Software and cathedrals are much the same – first we build them, then we pray.
+
+Sam Redwine [Proceedings of the 4th International Software Process Workshop, Moretonhampstead, Devon, U.K., 11–13 May 1988, IEEE Computer Society]
+
+למה לטרוח על פונקציות אם פשוט אפשר להקליד מהר יותר?
+
+Why bother with subroutines when you can type fast?
+
+Vaughn Rokosz
+
+חוק וינברג השני: אם קבלנים היו בונים בניינים באותה הדרך שבה מתכנתים יוצרים תוכנות, אז הנקר הראשון שהיה מגיע היה מחריב את היקום.
+
+Weinberg's Second Law: If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization.
+
+Gerald Weinberg cited in: Murali Chemuturi (2010) Mastering Software Quality Assurance: Best Practices, Tools and Technique for Software Developers. p. ix Previously attributed to Dennis Hall at the Lawrence Berkeley Labs, in Clifford Stoll's "The Cuckoo's Egg" (1989), p. 89. "If people built houses the way we write programs, the first woodpecker would wipe out civilization."
+
+הפעילות העיקרית בתכנות היא לא היצירה של תוכניות חדשות ועצמאיות, אלא אינטגרציה, שינוי והסבר של תוכניות קיימות.
+
+The main activity of programming is not the origination of new independent programs, but in the integration, modification, and explanation of existing ones.
+
+Terry Winograd (1991) "Beyond Programming Languages", in Artificial intelligence & software engineering, ed. Derek Partridge, p. 317
+
+טסטים יכולים להוכיח את קיומם של באגים, לא את היעדרם.
+
+Testing can only prove the presence of bugs, not their absence.
+
+Edsger W. Dijkstra
+
+כלי הדיבאגינג היעיל ביותר הוא עדיין חשיבה זהירה, יחד עם פקודות הדפסה שממוקמות בשיקול דעת.
+
+The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.
+
+Brian Kernighan, "Unix for Beginners" (1979)
+
+כשיש מספיק גלגלי עיניים, כל הבאגים חשופים.
+
+Given enough eyeballs, all bugs are shallow.
+
+Eric S. Raymond (Linus' Law), The Cathedral and the Bazaar
+
+הבאג האחרון לא יתוקן עד שאחרון המשתמשים ימות.
+
+The last bug isn't fixed until the last user is dead.
+
+Sidney Markowitz, 1995 [6]
+
+הקלדה איננה תחליף לחשיבה.
+
+Typing is no substitute for thinking.
+
+Richard W. Hamming cited in: John G. Kemeny, ‎Thomas E. Kurtz (1987) Structured BASIC programming. p. 118
+
+אם מישהו טוען שיש לו את שפת התכנות הכי טובה, הוא או שוטה או איש מכירות או שניהם גם יחד.
+
+If someone claims to have the perfect programming language, he is either a fool or a salesman or both.
+
+Bjarne Stroustrup on Wired.com
+
+יש אנשים שכאשר הם נתקלים בבעיה הם חושבים לעצמם ״אני יודע, אני אשתמש ב-sed״. כעת יש להם שתי בעיות.
+
+Some people, when confronted with a problem, think "I know, I'll use sed." Now they have two problems.
+
+Jamie Zawinski, in The UNIX-HATERS Handbook
+
+פונקציות שרק יוצרות ערכים חדשים הן קלות יותר לשילוב ביניהן בצורות חדשות, מאשר פונקציות עם תופעות לוואי.
+
+“Functions that create values are easier to combine in new ways than functions that directly perform side effects”
+
+Marijn Haverbeke
+
+בעוד שבשפות פרוצדורליות אפשר לכתוב קוד ספגטי. בשפות מונחות עצמים, כאשר לא משתמשים בהם נכון, אפשר להוסיף כדורי בשר למנת הספגטי.
+
+“But while you can always write 'spaghetti code' in a procedural language, object-oriented languages used poorly can add meatballs to your spaghetti.”
+
+Andrew Hunt
+
+לפעמים אי אפשר לתכנת כדי להתגבר על טמטום.
+
+“Sometimes you cannot program around stupid.”
+
+David Ferrell
+
+קוד הוא כמו אהבה, בהתחלה הוא נוצר עם כוונות מאוד ברורות, אבל זה יכול להסתבך.
+
+“A code is like love, it has created with clear intentions at the beginning, but it can get complicated.”
+
+Gerry Geek, Ice Breakers for Project Managers: Jokes, Quotes, and Brainteasers
+
+טסטים זה הסיפור שאנחנו מספרים לדורות הבאים של המתכנתים על הפרויקט.
+
+“Tests are stories we tell the next generation of programmers on a project.”
+
+Roy Osherove, The Art of Unit Testing: With Examples in .NET
+
+ללמוד שפת תכנות זה לא מעניין כמו לדעת איך היא עובדת.
+
+“Learning a language is not interesting than knowing how it works.”
+
+Ritesh Shrivastav
+
+הרבה יותר קל לתכנן מראש מחלקה שתהיה בטוחת תהליכים, מאשר לתקן אותה שתהיה כזו בדיעבד.
+
+“It is far easier to design a class to be thread-safe than to retrofit it for thread safety later.”
+
+Brian Goetz, Java Concurrency in Practice
+
+תכנות זה האומנות של לעשות דבר אחד בכל רגע נתון.
+
+“Programming is the art of doing one thing at a time”
+
+Michael Feathers, Working Effectively with Legacy Code
+
+לעתים יש מתח בין אבסטרקציה והכמסה לבין ביצועים, אבל תמיד כדאי לדאוג קודם כל שהקוד יהיה נכון, ורק אחר כך לדאוג שהוא יהיה מהיר.
+
+“Sometimes abstraction and encapsulation are at odds with performance, but it is always a good practice first to make your code right, and then make it fast.”
+
+Brian Goetz, Java Concurrency in Practice
+
+לא התמקצעת בכלי מסוים עד שהבנת מתי לא נכון להשתמש בו.
+
+You haven't mastered a tool until you understand when it should not be used.
+
+@kelseyhightower
+
+ללמוד איך לפרק בעיות לחתיכות קטנות זה אחד הכישורים החשובים יותר במדעי המחשב / בחיים.
+
+Learning to break down problems into smaller pieces is one of the most important skills in computer science / life.
+
+Addy Osmani @addyosmani
+
+מתכנת טוב מסתכל לשני הצדדים גם כשהוא חוצה כביש חד סטרי.
+
+A good programmer is someone who always looks both ways before crossing a on
+
+way street." — Doug Linder
+
+לספר למתכנת שיש כבר ספרייה שעושה X זה כמו לומר למשורר שכבר יש שיר על אהבה.
+
+Telling a programmer there's already a library to do X is like telling a songwriter there's already a song about love.
+
+Pete Cordell
+
+התוכניות הטובות ביותר נכתבו על ידי מישהו שהיה אמור לעבוד על משהו אחר.
+
+The best programs are the ones written when the programmer is supposed to be working on something else.
+
+Melinda Varian
+
+החלק הקשה בתכנות זה לא לפתור את הבעיות אלא ההחלטה איזה בעיות לפתור.
+
+In programming the hard part isn’t solving problems, but deciding what problems to solve.
+
+Paul Graham
+
+לתעד קוד זה כמו לנקות שירותים – אנחנו לא רוצים לעשות את זה אף פעם, אבל זה בהחלט יוצר חווייה טובה יותר עבורנו ועבור האורחים שלנו.
+
+Commenting your code is like cleaning your bathroom – you never want to do it, but it really does create a more pleasant experience for you and your guests.
+
+Ryan Campbell
+
+אני קורא לסביבת הסטייג׳ינג שלי ״תיאוריה״ ובודק כמה דברים עובדים אצלי בתיאוריה אבל לא במציאות.
+
+I call my staging environment “Theory” on account of how many things work in theory, but not in production.
+
+Corey Quinn @QuinnyPig
+
+ההיבט הכי חשוב ביותר בתכנות הוא להיות ברור בנוגע למה אנחנו רוצים ליצור.
+
+The most important single aspect of software development is to be clear about what you are trying to build.
+
+Bjarne Stroustrup
+
+כמות השינה שלך תשפיע על האפקטיביות שלך יותר משפת התכנות שלך.
+
+The amount of sleep that you get has a larger impact on your effectiveness than the programming language you use." – Wesley Apteka
+
+Cassels
+
+תיעוד זה מכתב אהבה שאתה כותב לעצמך העתידי.
+
+Documentation is a love letter that you write to your future self.
+
+Damian Conway
+
+העוצמה של ג׳אווהסקריפט זה שאתה יכול לעשות איתה הכל. החולשה שלה היא שזה מה שתעשה.
+
+The strength of JavaScript is that you can do anything. The weakness is that you will.
+
+Reg Braithwaite
+
+הכישור מספר אחת שנדרש כדי ללמוד מערכת מורכבת זה סבלנות.
+
+The number one skill required for learning any complex system is patience.
+
+Kelsey Hightower ( @kelseyhightower)
+
+מחשב הוא כמו גאון שובב. הוא יעשה בדיוק את מה שאתה מבקש ממנו, לא בהכרח את מה שאתה רוצה.
+
+A computer is like a mischievous genie. It will give you exactly what you ask for, but not always what you want.
+
+Joe Sondow
+
+כדי להיות מתכנת חייבים ליצור מערכת יחסים מנוהלת בזהירות עם המושג שגיאה. אי אפשר להתחמק מזה. או שתדע להתמודד עם כשלון, או שהעבודה שלך תהפוך להיות בלתי נסבלת.
+
+To be a programmer is to develop a carefully managed relationship with error. There's no getting around it. You either make your accommodations with failure, or the work will become intolerable.
+
+Ellen Ullman
+
+העניין בתכנות זה לא מה אתה יודע. זה מה אתה יכול להבין.
+
+Programming isn’t about what you know; it’s about what you can figure out.”
+
+Chris Pine
+
+ככל שתתחיל לתכנת מהר יותר כך התכנות ייקח לך יותר זמן.
+
+The sooner you start to code, the longer the program will take.
+
+Roy Carlson
+    </p>
+</body>
+</html>
